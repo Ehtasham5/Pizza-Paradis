@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Paradis</title>
+    <link rel="stylesheet" href="styling.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="img/Pizza-Paradis-Favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div class="scroll-up-button">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- Cursor -->
+    <div id="cursor">
+      <div class="cursor-dot"></div>
+      <div class="cursor-burst"></div>
+    </div>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html"
+            ><img src="img/Pizza-Paradis-Logo.png" alt=""
+          /></a>
+        </div>
+
+        <!-- Search bar -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search your desire food here"
+            autocomplete="off"
+          />
+          <span class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <ul id="searchSuggestions"></ul>
+        </div>
+
+        <!-- Menu Items -->
+        <ul class="nav-links">
+          <li><a href="#" class="menu-btn">Meny</a></li>
+          <li><a href="#" class="menu-btn">Om oss</a></li>
+          <li><a href="#" class="menu-btn">Pick-up</a></li>
+          <li><a href="#" class="menu-btn">Dine-In</a></li>
+          <li><a href="#" class="table-booking">Table Booking</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="wishlist-nav-wrapper">
+            <img
+              src="img/WIshlist-icon.svg"
+              alt="Wishlist"
+              id="navbar-wishlist-icon"
+            />
+            <span id="wishlist-count" class="wishlist-count-badge">0</span>
+          </div>
+          <a href="home-nu.html" id="lang-switch">Eng</a>
+        </div>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <div class="hero-section">
+      <div class="text-content">
+        <h1 class="first-heading">EAT Burger</h1>
+        <h1 class="king">KING</h1>
+        <!-- <div class="background"></div> -->
+      </div>
+
+      <img
+        src="img/Hero-background-city.png"
+        alt="City Skyline"
+        class="cityscape"
+      />
+
+      <div class="products">
+        <img src="img/Hero-image.png" alt="French Fries" />
+      </div>
+    </div>
+
+    <!-- New Arrivals -->
+    <div class="container">
+      <h2 class="section-title">New Arrival</h2>
+
+      <!-- Promo Banner Section -->
+      <div class="promo-banner">
+        <img src="img/Pollo-Loco-buckets.png" alt="" />
+      </div>
+
+      <!-- Product Grid Section -->
+      <div class="product-grid">
+        <!-- Product Card 1: Beef Doner -->
+        <div class="product-card">
+          <img
+            src="img/loaded-beef-burger.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Beef Doner</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2: S'mores Cookie -->
+        <div class="product-card">
+          <img src="img/Deal-1.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">S'mores Cookie</h3>
+            <p class="product-description">
+              This indulgent cookie features a buttery, golden base, filled
+              with...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 390.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3: Spicy Korean -->
+        <div class="product-card">
+          <img
+            src="img/Grilled-lamb-burger.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Spicy Korean</h3>
+            <p class="product-description">
+              Ignite your taste buds with bold, zesty blazing-hot flavor. Get...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 690.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4: The Outlaw -->
+        <div class="product-card">
+          <img
+            src="img/Grilled-lamb-burger.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">The OutLaw</h3>
+            <p class="product-description">
+              A juicy beef patty layered with beef pepperani, crispy, fried...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 1090.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="section-title">Deals</h2>
+
+      <div class="promo-banner">
+        <img src="img/Special-Sides-Banner.png" alt="" />
+      </div>
+
+      <div class="product-grid deals">
+        <!-- Product Card 1: The Showdown -->
+        <div class="product-card">
+          <img src="img/Deal-1.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">The Showdown</h3>
+            <p class="product-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              nulla repudiandae...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 790.00</span>
+              <!-- <span class="badge">New</span> -->
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2: The ShotGun Double -->
+        <div class="product-card">
+          <img src="img/Deal-1.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">ShotGun Double</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="img/Deal-1.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">The OutLaw</h3>
+            <p class="product-description">
+              A juicy beef patty layered with beef pepperani, crispy, fried...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 1090.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loaded Fries -->
+
+      <h2 class="section-title">Loaded Fries</h2>
+
+      <div class="promo-banner">
+        <img src="img/Special-Pizzas-Banner.png" alt="" />
+      </div>
+
+      <div class="product-grid">
+        <!-- Product Card 1: The Showdown -->
+        <div class="product-card">
+          <img
+            src="img/loaded-bacon-fries.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Loaded Nashville Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2: The ShotGun Double -->
+        <div class="product-card">
+          <img
+            src="img/loaded-bacon-fries.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Loaded Bomber Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+
+        <div class="product-card">
+          <img
+            src="img/loaded-bacon-fries.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Loaded Doner Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+
+        <div class="product-card">
+          <img
+            src="img/Loaded-fries-banner-image.png"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Loaded Nashville Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="product-card">
+          <img
+            src="img/Loaded-fries-banner-image.png"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Loaded Bomber Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="product-card">
+          <img
+            src="img/Loaded-fries-banner-image.png"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Loaded Doner Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beef Burger -->
+
+      <h2 class="section-title">Beef Burger</h2>
+
+      <div class="promo-banner">
+        <img src="img/Exclusive-Deals-Banner.png" alt="" />
+      </div>
+
+      <div class="product-grid">
+        <!-- Product Card 1: The Showdown -->
+        <div class="product-card">
+          <img
+            src="img/loaded-beef-burger.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">007</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2: The ShotGun Double -->
+        <div class="product-card">
+          <img
+            src="img/Double-Beef-Burger.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Smash Beef Double</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img
+            src="img/loaded-beef-burger.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">The Outlaw</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combo -->
+
+      <h2 class="section-title">Combo</h2>
+
+      <div class="promo-banner">
+        <img src="img/Pollo-Loco-buckets.png" alt="" />
+      </div>
+
+      <div class="product-grid">
+        <!-- Product Card 1: The Showdown -->
+        <div class="product-card">
+          <img src="img/Deal-3.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">007 Combo</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2: The ShotGun Double -->
+        <div class="product-card">
+          <img src="img/Deal-2.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">Nashville Hot Sandwich Combo</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="img/Deal-1.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">Chicken Fillet Sandwich Combo</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="img/Deal-3.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">Spicy Korean Combo</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="img/Deal-2.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">Grilled Chicken Combo</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="img/Deal-1.jpg" alt="Beef Doner" class="product-image" />
+
+          <div class="card-content">
+            <h3 class="product-title">Beef Doner Combo</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Handcut Fries -->
+
+      <h2 class="section-title">Fries</h2>
+
+      <div class="promo-banner">
+        <img src="img/Exclusive-Deals-Banner.png" alt="" />
+      </div>
+
+      <div class="product-grid">
+        <!-- Product Card 1: The Showdown -->
+        <div class="product-card">
+          <img
+            src="img/loaded-bacon-fries.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Spicy Korean Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2: The ShotGun Double -->
+        <div class="product-card">
+          <img
+            src="img/Fries-banner-image.png"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Cheddar Cheese Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="img/Beef-masala-fries.jpg"
+            alt="Beef Doner"
+            class="product-image"
+          />
+
+          <div class="card-content">
+            <h3 class="product-title">Hot Garlic Mayo Fries</h3>
+            <p class="product-description">
+              Savor the Supreme: Lean Premium Meat, Signature Garlic...
+            </p>
+            <div class="price-row">
+              <span class="product-price">Rs. 490.00</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn-add-to-cart">
+                <a
+                  href="https://order.foodsted.com/restaurant/pizza-paradis-stv"
+                  target="_blank"
+                  >Bestill nå</a
+                >
+              </button>
+              <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Promo Banner -->
+    <div class="promotion">
+      <div class="promo-banner-last">
+        <div class="promo-content-last">
+          <p class="sub-heading-last">Last ned appen</p>
+          <h2 class="main-heading-last">
+            Last ned Foodsted<br />
+            Bestill i dag!
+          </h2>
+          <div class="app-badges-last">
+            <a href="#" aria-label="Download on the App Store">
+              <img src="img/App-store.png" alt="App Store badge" />
+            </a>
+            <a href="#" aria-label="Get it on Google Play">
+              <img src="img/Play-store.png" alt="Google Play badge" />
+            </a>
+          </div>
+        </div>
+        <div class="promo-images-last">
+          <img
+            src="img/Foodsted-App-UI-Mockup.png"
+            alt="Juicy hamburger"
+            class="burger-img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-items">
+        <div class="footer-logo">
+          <a href="index.html"
+            ><img src="img/Pizza-Paradis-Logo.png" alt=""
+          /></a>
+        </div>
+        <p class="footer-para">
+          Et sted for eksperter der smak møttes med ønsker, drømmer og
+          forventninger. ønsker, drømmer og forventninger.
+        </p>
+        <div class="footer-socials">
+          <a href="">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-items">
+        <h2 class="footer-heading">Hurtigkoblinger</h2>
+        <ul class="footer-links">
+          <li><a href="" class="footer-link">Hjem</a></li>
+          <li><a href="" class="footer-link">Meny</a></li>
+          <li><a href="" class="footer-link">Personvernerklæring</a></li>
+          <li><a href="" class="footer-link">Vilkår for bruk</a></li>
+          <li><a href="" class="footer-link">Om oss</a></li>
+        </ul>
+      </div>
+      <div class="footer-items">
+        <h2 class="footer-heading">Åpningstider</h2>
+        <div class="footer-timing">
+          <i class="fa-solid fa-clock"></i>
+          <p class="details">Mandag – Søndag: 14:00 – 23:00</p>
+        </div>
+        <div class="footer-timing">
+          <i class="fa-solid fa-phone"></i>
+          <p class="details">+47 5152 6970</p>
+        </div>
+        <div class="footer-timing">
+          <i class="fa-solid fa-location-dot"></i>
+          <p class="details">
+            <span class="location"
+              ><a href="">Ranrgveien 53, 4025 Stavanger, Norway</a></span
+            >
+            <!-- Ranrgveien 53, 4025 Stavanger, Norway -->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="copyright">&copy; Opphavsrett 2025 Alle rettigheter forbeholdt</p>
+
+    <!-- Mobile Search Popup -->
+    <div id="mobileSearchOverlay" class="mobile-search-overlay">
+      <div class="mobile-search-popup">
+        <span class="close-mobile-search">&times;</span>
+        <input
+          type="text"
+          id="mobileSearchInput"
+          placeholder="Search your desire food here"
+          autocomplete="off"
+        />
+        <ul id="mobileSearchSuggestions"></ul>
+      </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div id="wishlistSidebar" class="wishlist-sidebar">
+      <div class="wishlist-header">
+        <h2>My Wishlist (<span id="sidebarWishlistCount">0</span>)</h2>
+        <span class="close-wishlist"><i class="fa-solid fa-xmark"></i></span>
+      </div>
+      <div id="wishlistItems" class="wishlist-items"></div>
+      <div class="wishlist-empty" id="emptyWishlistMessage">
+        <i class="fa-solid fa-heart"></i>
+        <p>Your wishlist is empty</p>
+      </div>
+    </div>
+    <div id="wishlistOverlay" class="wishlist-overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

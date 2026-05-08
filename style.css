@@ -1,0 +1,924 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Meow+Script&family=Yellowtail&display=swap");
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Items */
+
+:root {
+  --dark-bg: #2b2b2b;
+  --primary-yellow: #ffd200;
+  --text-light: #ffffff;
+  --primary-orange: #f97316;
+  --primary-yellow: #facc15;
+  --dark-gray: #4b5563;
+  --light-gray: #6b7280;
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+  --danger-red: #ef4444;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background: var(--background-color);
+  /* padding: 2rem; */
+}
+
+/* Navbar Styling */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: white;
+  justify-content: space-between;
+  position: relative; /* Added for positioning the mobile menu */
+}
+
+/* Logo */
+.logo img {
+  width: 70px;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #bbb;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: var(--primary-yellow);
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu Button (Yellow) */
+.menu-btn {
+  /* background-color: #ffd700; */
+  padding: 10px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+/* Table Booking (Black button) */
+.table-booking {
+  background: black;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-btn:hover {
+  background-color: #ffc107;
+}
+
+/* Hamburger Menu Icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  /* color: var(--light-gray); */
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--dark-gray);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hero Banner */
+.hero-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.text-content {
+  max-width: 40%;
+  line-height: 1.4;
+}
+
+.text-content .first-heading {
+  font-family: "Pacifico", cursive;
+  font-size: 80px;
+  color: #fdd835;
+  /* margin-top: 60px; */
+  /* margin-bottom: 80px; */
+  /* padding: 40px; */
+  text-shadow: 3px 3px 0 #000;
+  transform: rotate(-8deg);
+  outline: none;
+}
+
+.king {
+  font-family: "Anton", sans-serif;
+  font-size: 150px;
+  /* padding: 20px; */
+  color: red;
+  text-shadow: 3px 3px 0 #000;
+  /* margin-top: -40px; */
+}
+.background {
+  position: absolute;
+  top: 340px;
+  left: 0;
+  width: 450px;
+  height: 250px;
+  /* z-index: -1; */
+  background-color: white;
+  filter: blur(50px);
+  /* filter: drop-shadow(16px 16px 20px red) invert(75%); */
+}
+
+.cityscape {
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  width: 70%;
+  height: 80%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.products {
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  max-width: 80%;
+  position: relative;
+  z-index: 2;
+}
+
+.products img {
+  max-height: 400px;
+  margin: 0 10px;
+}
+
+/* New Arrivals */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Section Title --- */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Promo Banner --- */
+.promo-banner {
+  background-color: var(--card-background);
+  border-radius: 1.5rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Hides parts of shapes that go outside */
+  margin-bottom: 3rem;
+}
+
+.promo-banner-title,
+.promo-banner-title-arrival {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem); /* Responsive font size */
+  line-height: 1;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.promo-banner-title-arrival .new {
+  color: var(--primary-orange);
+}
+
+.promo-banner-title-arrival .arrivals {
+  color: var(--dark-gray);
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.promo-banner-underline {
+  width: 30%;
+  max-width: 250px;
+  height: 5px;
+  background-color: var(--primary-yellow);
+  margin: 1.5rem auto 0;
+  border-radius: 3px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Decorative elements for the banner --- */
+.deco {
+  position: absolute;
+  z-index: 1;
+}
+
+.deco-red-blob {
+  top: 20px;
+  left: -30px;
+  width: 150px;
+}
+.deco-blue-blob {
+  bottom: -30px;
+  right: -20px;
+  width: 150px;
+}
+.deco-fries {
+  bottom: 20px;
+  left: 5%;
+  width: 60px;
+  transform: rotate(-15deg);
+}
+.deco-burrito {
+  top: 20px;
+  left: 35%;
+  width: 80px;
+  transform: rotate(15deg);
+}
+.deco-burger {
+  top: 20px;
+  right: 8%;
+  width: 70px;
+  transform: rotate(10deg);
+}
+
+/* --- Product Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- Product Card --- */
+.product-card {
+  background-color: var(--card-background);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+}
+
+.product-description {
+  font-size: 0.875rem;
+  color: var(--light-gray);
+  flex-grow: 1; /* Pushes the footer to the bottom */
+  margin-bottom: 1rem;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.product-badge {
+  background-color: #111827;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.25rem;
+}
+
+.product-price {
+  background-color: var(--danger-red);
+  color: white;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-add-to-cart {
+  background-color: var(--primary-yellow);
+  color: #1f2937;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #eab308;
+}
+
+.wishlist-icon {
+  font-size: 1.5rem;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.wishlist-icon:hover {
+  color: var(--danger-red);
+}
+
+/* Deals Section */
+
+.promo-title-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.promo-banner-title {
+  width: 80%;
+  transform: rotate(-5deg);
+  line-height: 0.7;
+  /* font-size: 5rem; */
+  /* margin-top: 30px; */
+  /* padding-top: 50px; */
+}
+
+.promo-banner-title .exclusive {
+  color: var(--dark-gray);
+  font-size: 6rem;
+  font-family: "Yellowtail", cursive;
+}
+
+.promo-banner-title .deals {
+  color: var(--primary-orange);
+  font-size: 8rem;
+  font-weight: 900;
+}
+
+.promo-banner-img {
+  width: 100%;
+}
+
+.promo-banner-img img {
+  width: 70%;
+}
+
+/* Deals  */
+
+.product-grid.deals {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  gap: 1.5rem;
+}
+
+/* Loaded Fries */
+
+.promo-banner-title.loaded-fries {
+  margin-left: auto;
+}
+
+.product-grid.loaded-fries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Beef Burger */
+
+.promo-banner-title .beef {
+  color: var(--danger-red);
+  font-size: 4rem;
+  font-family: "Yellowtail", cursive;
+}
+
+.product-grid.beef {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Combo  */
+
+.promo-banner-title .combo {
+  color: var(--danger-red);
+  font-size: 4rem;
+  font-family: "Yellowtail", cursive;
+}
+
+/* Fries */
+
+.product-grid.fries {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.promo-banner-img .fries {
+  width: 70%;
+}
+
+/* Beef Burger */
+
+.promo-banner-img .burger {
+  width: 70%;
+}
+
+/* Combo */
+
+.promo-banner-img .combo {
+  width: 70%;
+}
+/* Promo Banner */
+.promotion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-banner-last {
+  position: relative;
+  margin: 30px 90px;
+  background-color: var(--dark-bg);
+  border-radius: 2.5rem; /* Large rounded corners */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 350px;
+  overflow: hidden; /* Crucial for containing the images and shapes */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* The yellow curved background shape */
+.promo-banner-last::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  background-color: var(--primary-yellow);
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  z-index: 1;
+}
+
+.promo-content-last {
+  flex: 1;
+  padding: 2rem 3rem;
+  z-index: 2; /* To sit on top of the yellow shape */
+}
+
+.promo-content-last .sub-heading-last {
+  color: var(--primary-yellow);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.promo-content-last .main-heading-last {
+  color: var(--text-light);
+  font-size: clamp(2rem, 5vw, 2.75rem); /* Responsive font size */
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.app-badges-last {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.app-badges-last a img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.app-badges-last a:hover img {
+  transform: scale(1.05);
+}
+
+.promo-images-last {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  min-height: 350px;
+  z-index: 2;
+}
+
+.promo-images-last img {
+  position: absolute;
+  right: 0;
+
+  max-width: 100%;
+  pointer-events: none; /* Prevents images from being draggable */
+}
+
+.burger-img {
+  right: -80px;
+  bottom: -50px;
+  width: 450px;
+  z-index: 3;
+}
+
+.phone-img {
+  right: 120px;
+  bottom: 0;
+  width: 280px;
+  transform: rotate(-5deg);
+  z-index: 4;
+}
+
+.scooter-img {
+  right: 200px;
+  bottom: 25px;
+  width: 250px;
+  z-index: 5;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  gap: 0.75rem;
+  /* flex: 1; */
+}
+
+.footer-items {
+  width: 35%;
+}
+.footer-para {
+  width: 70%;
+  margin: 5px;
+  margin-top: -10px;
+  color: var(--light-gray);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.footer-socials i {
+  color: var(--light-gray);
+  cursor: pointer;
+}
+
+.footer-socials i:hover {
+  color: var(--primary-yellow);
+}
+
+.footer-heading {
+  font-weight: 900;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-link {
+  text-decoration: none;
+  line-height: 1.7;
+  color: var(--light-gray);
+}
+
+.footer-timing {
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.footer-timing i {
+  color: var(--light-gray);
+  font-size: 1rem;
+}
+
+.footer-timing .details {
+  color: var(--light-gray);
+}
+
+/* Search Filter */
+
+.search-container {
+  position: relative;
+}
+
+.search-results {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it's on top of other content */
+  max-height: 300px; /* Limit height for long lists */
+  overflow-y: auto; /* Add scrollbar if list is too long */
+  /* display: none; Hidden by default */
+}
+
+.search-results li {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-results li:last-child {
+  border-bottom: none;
+}
+
+.search-results li:hover {
+  background-color: #f5f5f5;
+}
+
+/* A class to highlight the product card when scrolled to */
+.product-card.highlight {
+  box-shadow: 0 0 0 3px var(--primary-yellow);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Media Queries For Mobile Devices and LAptops */
+@media (max-width: 1024px) {
+  /* --- NAVBAR LAYOUT --- */
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* --- Show the Hamburger Icon --- */
+  .hamburger {
+    display: flex;
+    order: 3;
+    /* Position it after the search bar in the flex order */
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* --- Hide Nav Links by Default on Mobile --- */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    /* order: 3; Ensure it's the last item in the flex flow */
+
+    /* Styling for the dropdown menu */
+    position: absolute;
+    top: 70px; /* Position it right below the navbar */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 0;
+  }
+
+  /* --- Active class (toggled by JS) to show the menu --- */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    /* width: 100%;
+    text-align: center;
+    margin: 0.5rem 0; */
+    padding: 1rem 0;
+  }
+
+  .nav-links li a {
+    display: block; /* Make the whole area clickable */
+    padding: 0.75rem;
+  }
+
+  .nav-links .table-booking {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  /* --- Reposition Search Bar --- */
+  .search-container {
+    width: 100%;
+    order: 2; /* Place it on the next line */
+    margin: 15px;
+    max-width: none;
+  }
+
+  /* --- Hero Section --- */
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+
+  .text-content .first-heading {
+    font-size: 50px;
+    transform: translate(10px, 20px);
+  }
+
+  .text-content .king {
+    font-size: 90px;
+  }
+
+  .products {
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .products img {
+    /* max-height: 150px; */
+    width: 90%;
+  }
+
+  /* --- Promo Banner with floating food items --- */
+  .promo-banner-title {
+    font-size: clamp(2rem, 15vw, 4rem); /* Adjust font size for mobile */
+  }
+
+  /* Hide some decorative elements on small screens to reduce clutter */
+  .deco-burrito,
+  .deco-fries {
+    display: none;
+  }
+
+  /* Adjust the promo banner with the angled title */
+  .promo-title-img {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-banner-title {
+    width: 100%;
+    text-align: center;
+    transform: none;
+  }
+
+  .promo-banner-title .deals {
+    font-size: 7rem;
+  }
+
+  /* --- Product Grids --- */
+  /* Target the grids that were NOT responsive by default */
+  .product-grid.deals,
+  .product-grid.loaded-fries,
+  .product-grid.beef {
+    grid-template-columns: 1fr; /* Stack items in a single column */
+    justify-content: center; /* Center the column */
+    gap: 1rem;
+  }
+  .product-grid.deals .product-card,
+  .product-grid.loaded-fries .product-card,
+  .product-grid.beef .product-card {
+    max-width: 350px; /* Give a max-width to the cards */
+    margin: 0 auto; /* Center the cards within the grid */
+  }
+
+  /* --- App Download Promo Banner --- */
+  .promo-banner-last {
+    flex-direction: column-reverse; /* Put images on top */
+    min-height: auto;
+    margin: 30px 20px; /* Reduce side margin */
+    padding: 2rem 0; /* Add vertical padding */
+  }
+
+  .promo-banner-last::before {
+    display: none;
+  }
+
+  .promo-content-last {
+    padding: 2rem;
+    text-align: center;
+    color: white; /* Text was black, now it's on a dark background */
+  }
+
+  .app-badges-last {
+    justify-content: center; /* Center the app store buttons */
+  }
+
+  .promo-images-last {
+    position: relative;
+    min-height: 250px; /* Give it a fixed height */
+    width: 100%;
+  }
+
+  .burger-img {
+    /* width: 80%px; */
+    right: 50%;
+    /* bottom: 0; */
+    /* transform: translateX(50%); */
+  }
+
+  /* --- Footer --- */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 2rem; /* Add more space between stacked items */
+  }
+
+  .footer-items {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .footer-para {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .footer-socials,
+  .footer-timing {
+    justify-content: center; /* Center icons and details */
+  }
+}
